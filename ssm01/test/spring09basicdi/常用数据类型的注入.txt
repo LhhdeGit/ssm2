@@ -1,0 +1,7 @@
+1.String 2.int 代表8大数据类型
+3.集合 list，set，map，property
+注入方式1：
+xml方式注入
+
+
+Spring 的el表达式${}

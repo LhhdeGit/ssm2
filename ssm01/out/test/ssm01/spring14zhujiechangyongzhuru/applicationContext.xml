@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
+>
+    <!--配置一个注解扫描-->
+    <context:component-scan base-package="spring14zhujiechangyongzhuru"/>
+
+    <util:list id="friendNames">
+        <value>孙猴子</value>
+        <value>小灰灰</value>
+        <value>哈士奇</value>
+        <value>李雪莹</value>
+    </util:list>
+
+    <util:set id="loverNames">
+        <value>薛展玉</value>
+        <value>薛展玉</value>
+        <value>薛展玉</value>
+        <value>刘宁宁</value>
+        <value>艾自强</value>
+    </util:set>
+
+    <util:map id="scores">
+        <entry key="english" value="8"></entry>
+        <entry key="vue" value="10"></entry>
+    </util:map>
+
+    <util:properties id="properties">
+        <prop key="uname">root</prop>
+        <prop key="upwd">123456</prop>
+    </util:properties>
+
+    <util:properties id="url" location="classpath:spring14zhujiechangyongzhuru/one.properties"/>
+
+</beans>

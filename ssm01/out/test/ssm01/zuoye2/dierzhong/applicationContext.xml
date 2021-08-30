@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd"
+>
+<!--第二种 赋值-->
+   <util:list id="friendList">
+       <value>小宁</value>
+       <value>小宁1</value>
+       <value>小宁2</value>
+       <value>小宁3</value>
+   </util:list>
+
+    <util:set id="goodfriendSet">
+        <value>小陈</value>
+        <value>小陈</value>
+        <value>小陈</value>
+        <value>小陈</value>
+    </util:set>
+
+    <util:map id="scroeMap">
+        <entry key="java" value="50"></entry>
+    </util:map>
+
+    <util:properties id="dbProp">
+        <prop key="pwd">123456</prop>
+    </util:properties>
+
+    <bean id="student2" class="zuoye2.dierzhong.Student2">
+        <property name="name" value="哈哈"></property>
+        <property name="age" value="19"></property>
+        <property name="friend" ref="friendList" ></property>
+        <property name="goodfriend" ref="goodfriendSet"></property>
+        <property name="scroe" ref="scroeMap"></property>
+        <property name="db" ref="dbProp"></property>
+    </bean>
+
+</beans>

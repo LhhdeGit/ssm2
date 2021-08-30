@@ -1,0 +1,26 @@
+package spring06di;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Spring06DiTest {
+    //以set注入常用的
+@Test
+    public void  test01(){
+    //1、加载容器的XML
+    String xml="spring06di/applicationContext.xml";
+
+    //2、xml文件一经加载，所有的对象都已经诞生了，这就和传统的test01创建的不一样
+    ApplicationContext ac = new ClassPathXmlApplicationContext(xml);
+    //System.out.println("ac = " + ac); //是否出现
+
+    //我们要拿主体
+    Person person = ac.getBean("person", Person.class);
+    person.play();
+
+    //人  手机 电脑 psp 小霸王 电视
+    //如何提高依赖效率  创建接口
+
+    }
+}
